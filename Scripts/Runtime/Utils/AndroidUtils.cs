@@ -29,7 +29,7 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils
             }
         }
 
-        public static void ShowAndroidToastMessage(string message)
+        public static void ShowToast(string message)
         {
             var toastClass = new AndroidJavaClass("android.widget.Toast");
             Activity.Call("runOnUiThread", new AndroidJavaRunnable(() =>
