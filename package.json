@@ -1,6 +1,6 @@
 {
   "name": "org.pcsoft.android-ex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Unity Android Extension",
   "description": "Extension for Unity Android usage.",
   "unity": "2021.1",
