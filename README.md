@@ -16,7 +16,7 @@ Scope: org.pcsoft
 AndroidUtils.ShowToast("Hello World");
 ```
 
-### Check is on TV
+### check is on TV
 ```C#
 AndroidUtils.IsOnTV
 ```
