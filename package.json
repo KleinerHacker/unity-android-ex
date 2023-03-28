@@ -1,14 +1,21 @@
 {
   "name": "org.pcsoft.android-ex",
-  "version": "1.0.1",
+  "version": "1.1.0-EA.01",
   "displayName": "Unity Android Extension",
   "description": "Extension for Unity Android usage.",
-  "unity": "2021.1",
+  "unity": "2021.3",
   "keywords": [
     "android",
     "extension",
     "mobile"
   ],
+  "dependencies": {
+    "org.pcsoft.localization": "1.5.6",
+    "org.pcsoft.editor-ex": "1.1.17",
+    "org.pcsoft.asset-loader": "2.0.1",
+    "com.unity.mobile.notifications": "2.1.1",
+    "org.pcsoft.common-ex": "1.1.11"
+  },
   "author": {
     "name": "Pfeiffer C Soft",
     "email": "kl3in3rhack3r@gmail.com",
