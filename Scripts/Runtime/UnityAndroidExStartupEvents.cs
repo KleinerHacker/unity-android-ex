@@ -3,15 +3,22 @@ using Unity.Notifications.Android;
 using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
 using UnityAssetLoader.Runtime.asset_loader.Scripts.Runtime;
 using UnityEngine;
+using UnityEngine.Android;
 
 namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime
 {
     //Permission android.permission.POST_NOTIFICATIONS required
     public static class UnityAndroidExStartupEvents
     {
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Init()
         {
+            Debug.Log("[ANDROID-NOTIFY] Request permission....");
+            if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
+            {
+                Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+            }
+
             Debug.Log("[ANDROID-NOTIFY] Initialize notification...");
             AssetResourcesLoader.LoadFromResources<NotificationSettings>("");
 
