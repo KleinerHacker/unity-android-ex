@@ -56,6 +56,18 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         [SerializeField]
         private Importance importance = Importance.Default;
 
+        [SerializeField]
+        private bool allowLights;
+
+        [SerializeField]
+        private bool allowVibration;
+
+        [SerializeField]
+        private LockScreenVisibility lockScreenVisibility = LockScreenVisibility.Private;
+
+        [SerializeField]
+        private string vibrationPattern;
+
         #endregion
 
         #region Properties
@@ -67,6 +79,14 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         public string Description => description;
 
         public Importance Importance => importance;
+
+        public bool AllowLights => allowLights;
+
+        public bool AllowVibration => allowVibration;
+
+        public LockScreenVisibility LockScreenVisibility => lockScreenVisibility;
+
+        public string VibrationPattern => vibrationPattern;
 
         #endregion
     }
