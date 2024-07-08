@@ -1,20 +1,22 @@
 {
-  "name": "UnityAndroidEx.Editor",
-  "rootNamespace": "UnityAndroidEx.Editor",
-  "references": [
-    "GUID:9c2cfd3ecc72dd342a43e616140cca9a",
-    "GUID:5d0595cabca3f65418ec01a472735d07",
-    "GUID:626cca1954403c942aaa892ce194af26"
-  ],
-  "includePlatforms": [
-    "Editor"
-  ],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "UnityAndroidEx.Editor",
+    "rootNamespace": "UnityAndroidEx.Editor",
+    "references": [
+        "GUID:9c2cfd3ecc72dd342a43e616140cca9a",
+        "GUID:5d0595cabca3f65418ec01a472735d07",
+        "GUID:626cca1954403c942aaa892ce194af26",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:2e77701fe0ceda44fb763f03ee704c37"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

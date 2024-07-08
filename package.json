@@ -1,16 +1,16 @@
 {
   "name": "org.pcsoft.android-ex",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "displayName": "Unity Android Extension",
   "description": "Extension for Unity Android usage.",
   "unity": "2021.3",
   "keywords": [
     "android",
     "extension",
-    "mobile"
+    "mobile",
+    "notification"
   ],
   "dependencies": {
-    "org.pcsoft.localization": "1.5.7",
     "org.pcsoft.editor-ex": "1.1.17",
     "org.pcsoft.asset-loader": "2.0.1",
     "com.unity.mobile.notifications": "2.1.1",

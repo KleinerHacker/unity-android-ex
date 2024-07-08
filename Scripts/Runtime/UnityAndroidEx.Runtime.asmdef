@@ -1,21 +1,20 @@
 {
-  "name": "UnityAndroidEx.Runtime",
-  "rootNamespace": "UnityAndroidEx.Runtime",
-  "references": [
-    "GUID:8a232e415480fe145a36742decb082fd",
-    "GUID:86c5ae22b787083498226e9faa99731d",
-    "GUID:03e750fc17f6cff499337d89b1e613c8",
-    "GUID:ac145e6b8c6034cdbadc8c6e26aedbcf",
-    "GUID:85a7f7b2e1fe24ff2b4c8b5d1a746334",
-    "GUID:626cca1954403c942aaa892ce194af26"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "UnityAndroidEx.Runtime",
+    "rootNamespace": "UnityAndroidEx.Runtime",
+    "references": [
+        "GUID:86c5ae22b787083498226e9faa99731d",
+        "GUID:ac145e6b8c6034cdbadc8c6e26aedbcf",
+        "GUID:85a7f7b2e1fe24ff2b4c8b5d1a746334",
+        "GUID:626cca1954403c942aaa892ce194af26",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

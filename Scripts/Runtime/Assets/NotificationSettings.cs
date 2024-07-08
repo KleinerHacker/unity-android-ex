@@ -3,8 +3,9 @@ using Unity.Notifications.Android;
 using UnityEditor;
 using UnityEditorEx.Runtime.editor_ex.Scripts.Runtime.Assets;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Metadata;
 using UnityEngine.Serialization;
-using UnityLocalization.Runtime.localization.Scripts.Runtime.Types;
 
 namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 {
@@ -48,10 +49,10 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         private string id;
 
         [SerializeField]
-        private LocalizedTextRef name;
+        private LocalizedString name;
 
         [SerializeField]
-        private LocalizedTextRef description;
+        private LocalizedString description;
 
         [SerializeField]
         private Importance importance = Importance.Default;
@@ -74,9 +75,9 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 
         public string ID => id;
 
-        public string Name => name;
+        public string Name => name.GetLocalizedString();
 
-        public string Description => description;
+        public string Description => description.GetLocalizedString();
 
         public Importance Importance => importance;
 
@@ -97,10 +98,10 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         #region Inspector Data
 
         [SerializeField]
-        private LocalizedTextRef title;
+        private LocalizedString title;
 
         [SerializeField]
-        private LocalizedTextRef text;
+        private LocalizedString text;
 
         [FormerlySerializedAs("daysDelayed")]
         [SerializeField]
@@ -114,9 +115,9 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 
         #region Properties
 
-        public string Title => title;
+        public string Title => title.GetLocalizedString();
 
-        public string Text => text;
+        public string Text => text.GetLocalizedString();
 
         public uint MinutesDelayed => minutesDelayed;
 
