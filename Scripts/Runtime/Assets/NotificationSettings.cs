@@ -1,5 +1,6 @@
 using System;
 using Unity.Notifications.Android;
+using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Extras;
 using UnityEditor;
 using UnityEditorEx.Runtime.editor_ex.Scripts.Runtime.Assets;
 using UnityEngine;
@@ -50,9 +51,11 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 
 #if UNITY_LOCALIZATION
         [SerializeField]
+        [SimpleLocalization]
         private LocalizedString name;
 
         [SerializeField]
+        [SimpleLocalization]
         private LocalizedString description;
 #else 
         [SerializeField]
