@@ -2,7 +2,7 @@ using System;
 using Unity.Notifications.Android;
 using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Extras;
 using UnityEditor;
-using UnityEditorEx.Runtime.editor_ex.Scripts.Runtime.Assets;
+using UnityEditorEx.Runtime.Projects.unity_editor_ex.Scripts.Runtime.Assets;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Metadata;

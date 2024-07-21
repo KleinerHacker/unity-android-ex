@@ -1,10 +1,9 @@
 ﻿using System.Linq;
 using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
 using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils;
-using UnityCommonEx.Runtime.common_ex.Scripts.Runtime.Utils.Extensions;
+using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Utils.Extensions;
 using UnityEditor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils.Extensions;
+using UnityEditorEx.Editor.Projects.unity_editor_ex.Scripts.Editor;
 using UnityEngine;
 
 namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider

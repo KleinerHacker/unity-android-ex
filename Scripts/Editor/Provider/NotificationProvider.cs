@@ -1,6 +1,6 @@
 ﻿using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
 using UnityEditor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils;
+using UnityEditorEx.Editor.Projects.unity_editor_ex.Scripts.Editor.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
 
