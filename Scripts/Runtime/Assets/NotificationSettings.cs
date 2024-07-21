@@ -48,11 +48,19 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         [SerializeField]
         private string id;
 
+#if UNITY_LOCALIZATION
         [SerializeField]
         private LocalizedString name;
 
         [SerializeField]
         private LocalizedString description;
+#else 
+        [SerializeField]
+        private String name;
+
+        [SerializeField]
+        private String description;
+#endif
 
         [SerializeField]
         private Importance importance = Importance.Default;
@@ -75,9 +83,15 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 
         public string ID => id;
 
+#if UNITY_LOCALIZATION
         public string Name => name.GetLocalizedString();
 
         public string Description => description.GetLocalizedString();
+#else
+        public string Name => name;
+
+        public string Description => description;
+#endif
 
         public Importance Importance => importance;
 
