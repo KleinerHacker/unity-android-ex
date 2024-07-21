@@ -17,7 +17,7 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
             Columns.Add(new FlexibleColumn { HeaderText = "Description", ElementCallback = OnMessage });
             Columns.Add(new FixedColumn { HeaderText = "Delay in minutes", AbsoluteWidth = 100f, MaxHeight = 20f, ElementCallback = OnDelay });
 
-            elementHeight = 225f;
+            elementHeight = 40f;
         }
 
         private void OnChannel(Rect rect, int i, bool isactive, bool isfocused)
@@ -64,7 +64,7 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
             Columns.Add(new FixedColumn { HeaderText = "Vibration Pattern", AbsoluteWidth = 100f, MaxHeight = 20f, ElementCallback = OnVibrationPattern });
             Columns.Add(new FixedColumn { HeaderText = "Lockscreen Presentation", AbsoluteWidth = 70f, ElementCallback = OnLockscreenPresentation });
 
-            elementHeight = 225f;
+            elementHeight = 40f;
         }
 
         private void OnID(Rect rect, int i, bool isactive, bool isfocused)

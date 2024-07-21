@@ -114,11 +114,21 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
     {
         #region Inspector Data
 
+#if UNITY_LOCALIZATION
         [SerializeField]
+        [SimpleLocalization]
         private LocalizedString title;
 
         [SerializeField]
+        [SimpleLocalization]
         private LocalizedString text;
+#else
+        [SerializeField]
+        private String title;
+
+        [SerializeField]
+        private String text;
+#endif
 
         [FormerlySerializedAs("daysDelayed")]
         [SerializeField]
@@ -132,9 +142,15 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
 
         #region Properties
 
+#if UNITY_LOCALIZATION
         public string Title => title.GetLocalizedString();
 
         public string Text => text.GetLocalizedString();
+#else
+        public string Title => title;
+
+        public string Text => text;
+#endif
 
         public uint MinutesDelayed => minutesDelayed;
 
