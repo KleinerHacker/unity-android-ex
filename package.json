@@ -11,8 +11,8 @@
     "notification"
   ],
   "dependencies": {
-    "org.pcsoft.editor-ex": "1.1.17",
-    "org.pcsoft.asset-loader": "2.0.1",
+    "org.pcsoft.editor-ex": "1.2.0",
+    "org.pcsoft.asset-loader": "2.1.0",
     "com.unity.mobile.notifications": "2.1.1",
     "org.pcsoft.unity-base": "1.1.0"
   },
