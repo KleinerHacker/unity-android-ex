@@ -1,12 +1,13 @@
-﻿using System.Linq;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils;
+﻿#if PLATFORM_ANDROID
+using System.Linq;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Assets;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Utils;
 using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Utils.Extensions;
 using UnityEditor;
 using UnityEditorEx.Editor.Projects.unity_editor_ex.Scripts.Editor;
 using UnityEngine;
 
-namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
+namespace UnityAndroidEx.Editor.Projects.unity_android_ex.Scripts.Editor.Provider
 {
     public sealed class NotificationItemList : TableReorderableList
     {
@@ -132,3 +133,4 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
         }
     }
 }
+#endif

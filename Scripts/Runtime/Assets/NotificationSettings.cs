@@ -1,3 +1,4 @@
+#if PLATFORM_ANDROID
 using System;
 using Unity.Notifications.Android;
 using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Extras;
@@ -5,58 +6,57 @@ using UnityEditor;
 using UnityEditorEx.Runtime.Projects.unity_editor_ex.Scripts.Runtime.Assets;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Metadata;
 using UnityEngine.Serialization;
 
-namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
+namespace UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Assets
 {
-    public sealed class NotificationSettings : ProviderAsset<NotificationSettings>
-    {
-        #region Static Area
+        public sealed class NotificationSettings : ProviderAsset<NotificationSettings>
+        {
+                #region Static Area
 
-        public static NotificationSettings Singleton => GetSingleton("Notification", "notification.asset");
+                public static NotificationSettings Singleton => GetSingleton("Notification", "notification.asset");
 
 #if UNITY_EDITOR
-        public static SerializedObject SerializedSingleton => GetSerializedSingleton("Notification", "notification.asset");
+                public static SerializedObject SerializedSingleton => GetSerializedSingleton("Notification", "notification.asset");
 #endif
 
-        #endregion
+                #endregion
 
-        #region Inspector Data
+                #region Inspector Data
 
-        [SerializeField]
-        private NotificationItem[] items = Array.Empty<NotificationItem>();
+                [SerializeField]
+                private NotificationItem[] items = Array.Empty<NotificationItem>();
 
-        [SerializeField]
-        private NotificationChannel[] channels = Array.Empty<NotificationChannel>();
+                [SerializeField]
+                private NotificationChannel[] channels = Array.Empty<NotificationChannel>();
 
-        #endregion
+                #endregion
 
-        #region Properties
+                #region Properties
 
-        public NotificationItem[] Items => items;
+                public NotificationItem[] Items => items;
 
-        public NotificationChannel[] Channels => channels;
+                public NotificationChannel[] Channels => channels;
 
-        #endregion
-    }
+                #endregion
+        }
 
-    [Serializable]
-    public sealed class NotificationChannel
-    {
-        #region Inspector Data
+        [Serializable]
+        public sealed class NotificationChannel
+        {
+                #region Inspector Data
 
-        [SerializeField]
-        private string id;
+                [SerializeField]
+                private string id;
 
 #if UNITY_LOCALIZATION
-        [SerializeField]
-        [SimpleLocalization]
-        private LocalizedString name;
+                [SerializeField]
+                [SimpleLocalization]
+                private LocalizedString name;
 
-        [SerializeField]
-        [SimpleLocalization]
-        private LocalizedString description;
+                [SerializeField]
+                [SimpleLocalization]
+                private LocalizedString description;
 #else 
         [SerializeField]
         private String name;
@@ -65,63 +65,63 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         private String description;
 #endif
 
-        [SerializeField]
-        private Importance importance = Importance.Default;
+                [SerializeField]
+                private Importance importance = Importance.Default;
 
-        [SerializeField]
-        private bool allowLights;
+                [SerializeField]
+                private bool allowLights;
 
-        [SerializeField]
-        private bool allowVibration;
+                [SerializeField]
+                private bool allowVibration;
 
-        [SerializeField]
-        private LockScreenVisibility lockScreenVisibility = LockScreenVisibility.Private;
+                [SerializeField]
+                private LockScreenVisibility lockScreenVisibility = LockScreenVisibility.Private;
 
-        [SerializeField]
-        private string vibrationPattern;
+                [SerializeField]
+                private string vibrationPattern;
 
-        #endregion
+                #endregion
 
-        #region Properties
+                #region Properties
 
-        public string ID => id;
+                public string ID => id;
 
 #if UNITY_LOCALIZATION
-        public string Name => name.GetLocalizedString();
+                public string Name => name.GetLocalizedString();
 
-        public string Description => description.GetLocalizedString();
+                public string Description => description.GetLocalizedString();
 #else
         public string Name => name;
 
         public string Description => description;
 #endif
 
-        public Importance Importance => importance;
+                public Importance Importance => importance;
 
-        public bool AllowLights => allowLights;
+                public bool AllowLights => allowLights;
 
-        public bool AllowVibration => allowVibration;
+                public bool AllowVibration => allowVibration;
 
-        public LockScreenVisibility LockScreenVisibility => lockScreenVisibility;
+                public LockScreenVisibility LockScreenVisibility => lockScreenVisibility;
 
-        public string VibrationPattern => vibrationPattern;
+                public string VibrationPattern => vibrationPattern;
 
-        #endregion
-    }
+                #endregion
+        }
 
-    [Serializable]
-    public sealed class NotificationItem
-    {
-        #region Inspector Data
+        [Serializable]
+        public sealed class NotificationItem
+        {
+                #region Inspector Data
 
 #if UNITY_LOCALIZATION
-        [SerializeField]
-        [SimpleLocalization]
-        private LocalizedString title;
+                [SerializeField]
+                [SimpleLocalization]
+                private LocalizedString title;
 
-        [SerializeField]
-        [SimpleLocalization]
-        private LocalizedString text;
+                [SerializeField]
+                [SimpleLocalization]
+                private LocalizedString text;
 #else
         [SerializeField]
         private String title;
@@ -130,32 +130,33 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets
         private String text;
 #endif
 
-        [FormerlySerializedAs("daysDelayed")]
-        [SerializeField]
-        [Min(1)]
-        private uint minutesDelayed = 1;
+                [FormerlySerializedAs("daysDelayed")]
+                [SerializeField]
+                [Min(1)]
+                private uint minutesDelayed = 1;
 
-        [SerializeField]
-        private string channelRef;
+                [SerializeField]
+                private string channelRef;
 
-        #endregion
+                #endregion
 
-        #region Properties
+                #region Properties
 
 #if UNITY_LOCALIZATION
-        public string Title => title.GetLocalizedString();
+                public string Title => title.GetLocalizedString();
 
-        public string Text => text.GetLocalizedString();
+                public string Text => text.GetLocalizedString();
 #else
         public string Title => title;
 
         public string Text => text;
 #endif
 
-        public uint MinutesDelayed => minutesDelayed;
+                public uint MinutesDelayed => minutesDelayed;
 
-        public string ChannelRef => channelRef;
+                public string ChannelRef => channelRef;
 
-        #endregion
-    }
+                #endregion
+        }
 }
+#endif
