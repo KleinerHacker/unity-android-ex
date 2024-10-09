@@ -1,10 +1,8 @@
 #if PLATFORM_ANDROID
 using UnityEngine;
-#endif
 
-namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils
+namespace UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Utils
 {
-#if PLATFORM_ANDROID
     public static class AndroidUtils
     {
         private static AndroidJavaObject Activity
@@ -39,5 +37,5 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils
             }));
         }
     }
-#endif
 }
+#endif
