@@ -1,8 +1,9 @@
-﻿using System;
+﻿#if PLATFORM_ANDROID
+using System;
 using System.Linq;
 using UnityEngine;
 
-namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils
+namespace UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Utils
 {
     internal static class VibrationPatternUtils
     {
@@ -36,3 +37,4 @@ namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils
         }
     }
 }
+#endif

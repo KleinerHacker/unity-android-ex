@@ -1,13 +1,13 @@
-﻿using System.Linq;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils;
-using UnityCommonEx.Runtime.common_ex.Scripts.Runtime.Utils.Extensions;
+﻿#if PLATFORM_ANDROID
+using System.Linq;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Assets;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Utils;
+using UnityBase.Runtime.Projects.unity_base.Scripts.Runtime.Utils.Extensions;
 using UnityEditor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils.Extensions;
+using UnityEditorEx.Editor.Projects.unity_editor_ex.Scripts.Editor;
 using UnityEngine;
 
-namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
+namespace UnityAndroidEx.Editor.Projects.unity_android_ex.Scripts.Editor.Provider
 {
     public sealed class NotificationItemList : TableReorderableList
     {
@@ -18,7 +18,7 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
             Columns.Add(new FlexibleColumn { HeaderText = "Description", ElementCallback = OnMessage });
             Columns.Add(new FixedColumn { HeaderText = "Delay in minutes", AbsoluteWidth = 100f, MaxHeight = 20f, ElementCallback = OnDelay });
 
-            elementHeight = 85f;
+            elementHeight = 40f;
         }
 
         private void OnChannel(Rect rect, int i, bool isactive, bool isfocused)
@@ -65,7 +65,7 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
             Columns.Add(new FixedColumn { HeaderText = "Vibration Pattern", AbsoluteWidth = 100f, MaxHeight = 20f, ElementCallback = OnVibrationPattern });
             Columns.Add(new FixedColumn { HeaderText = "Lockscreen Presentation", AbsoluteWidth = 70f, ElementCallback = OnLockscreenPresentation });
 
-            elementHeight = 85f;
+            elementHeight = 40f;
         }
 
         private void OnID(Rect rect, int i, bool isactive, bool isfocused)
@@ -133,3 +133,4 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
         }
     }
 }
+#endif

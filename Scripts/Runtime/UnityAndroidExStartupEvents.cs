@@ -1,12 +1,12 @@
 ﻿#if PCSOFT_ANDROID_NOTIFICATION && PLATFORM_ANDROID
 using Unity.Notifications.Android;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
-using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Utils.Extensions;
-using UnityAssetLoader.Runtime.asset_loader.Scripts.Runtime;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Assets;
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Utils.Extensions;
+using UnityAssetLoader.Runtime.Projects.unity_asset_loader.Scripts.Runtime;
 using UnityEngine;
 using UnityEngine.Android;
 
-namespace UnityAndroidEx.Runtime.android_ex.Scripts.Runtime
+namespace UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime
 {
     //Permission android.permission.POST_NOTIFICATIONS required
     public static class UnityAndroidExStartupEvents

@@ -1,10 +1,12 @@
-﻿using UnityAndroidEx.Runtime.android_ex.Scripts.Runtime.Assets;
+﻿#if PLATFORM_ANDROID
+using UnityAndroidEx.Runtime.Projects.unity_android_ex.Scripts.Runtime.Assets;
+#endif
 using UnityEditor;
-using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils;
+using UnityEditorEx.Editor.Projects.unity_editor_ex.Scripts.Editor.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
+namespace UnityAndroidEx.Editor.Projects.unity_android_ex.Scripts.Editor.Provider
 {
     public sealed class NotificationProvider : SettingsProvider
     {
@@ -22,13 +24,17 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
         private SerializedProperty _itemsProperty;
         private SerializedProperty _channelsProperty;
 
+#if PLATFORM_ANDROID
         private NotificationItemList notificationItemList;
         private NotificationChannelList notificationChannelList;
+#endif
 
-        public NotificationProvider() : base("Project/Player/Notification", SettingsScope.Project, new[] { "android", "mobile", "notification" })
+        public NotificationProvider() : base("Project/Player/Notification", SettingsScope.Project,
+            new[] { "android", "mobile", "notification" })
         {
         }
 
+#if PLATFORM_ANDROID
         public override void OnActivate(string searchContext, VisualElement rootElement)
         {
             _settings = NotificationSettings.SerializedSingleton;
@@ -41,9 +47,11 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
             notificationItemList = new NotificationItemList(_settings, _itemsProperty);
             notificationChannelList = new NotificationChannelList(_settings, _channelsProperty);
         }
+#endif
 
         public override void OnTitleBarGUI()
         {
+#if PLATFORM_ANDROID
             GUILayout.BeginVertical();
             {
                 ExtendedEditorGUILayout.SymbolField("Activate System", "PCSOFT_ANDROID_NOTIFICATION");
@@ -60,10 +68,13 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
                 EditorGUI.EndDisabledGroup();
             }
             GUILayout.EndVertical();
+#endif
         }
+
 
         public override void OnGUI(string searchContext)
         {
+#if PLATFORM_ANDROID
             _settings.Update();
 
             GUILayout.Space(15f);
@@ -79,6 +90,9 @@ namespace UnityAndroidEx.Editor.android_ex.Scripts.Editor.Provider
 #endif
 
             _settings.ApplyModifiedProperties();
+#else
+            GUILayout.Label("Target Platform must be Android", EditorStyles.boldLabel);
+#endif
         }
     }
 }
