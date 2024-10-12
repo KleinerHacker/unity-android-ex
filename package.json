@@ -1,6 +1,6 @@
 {
   "name": "org.pcsoft.android-ex",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "displayName": "Unity Android Extension",
   "description": "Extension for Unity Android usage.",
   "unity": "2021.3",
@@ -14,7 +14,7 @@
     "org.pcsoft.editor-ex": "1.2.1",
     "org.pcsoft.asset-loader": "2.1.1",
     "com.unity.mobile.notifications": "2.3.2",
-    "org.pcsoft.unity-base": "2.0.0-EA.2"
+    "org.pcsoft.base": "2.0.0-EA.2"
   },
   "author": {
     "name": "Pfeiffer C Soft",
